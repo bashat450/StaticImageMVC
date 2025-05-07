@@ -1,0 +1,14 @@
+﻿@model List<MvcProducts.Models.ProductModel>
+
+    @{
+        ViewBag.Title = "Index Page";
+    }
+
+    <h1 class="text-center">Products</h1>
+    <h2>Here Your Products Check It...</h2>
+    @{
+        foreach (var item in Model)
+        {
+            Html.RenderPartial("_ProductPartialView", item);
+        }
+    }
